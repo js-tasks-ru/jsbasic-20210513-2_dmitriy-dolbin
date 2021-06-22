@@ -90,7 +90,7 @@ export default class Carousel {
 
   onClickAdd(event) {
     let btn = event.target.parentNode;
-    let slide = event.target.parentNode.parentNode.parentNode;
+    let slide = event.target.closest('.carousel__slide');
     btn.dispatchEvent(new CustomEvent('product-add', {
       detail: slide.id,
       bubbles: true
